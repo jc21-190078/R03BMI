@@ -30,7 +30,7 @@ namespace R03BMI
                 w = w / 100;
             }
 
-            answer = w / (h * 2);
+            answer = w / (h * h);
             result.Text = ""+answer;
             
         }
