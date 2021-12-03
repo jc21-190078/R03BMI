@@ -34,7 +34,7 @@ namespace R03BMI
 
                 answer = w / (h * h);
                 result.Text = "" + answer;
-            }catch(FormatException e)
+            }catch(FormatException ex)
             {
                 result.Text = "数値を入力してください";
             }
