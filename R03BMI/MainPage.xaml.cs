@@ -33,7 +33,7 @@ namespace R03BMI
                 }
 
                 answer= w / (h * h);
-                answer = Math.Round(1.5);
+                answer = Math.Round(1.0);
                 result.Text = "" + answer;
             }catch(FormatException ex)
             {
