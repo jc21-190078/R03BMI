@@ -19,20 +19,25 @@ namespace R03BMI
         private void Button_Clicked(object sender, EventArgs e)
         {
             double h, w,answer;
-            h = double.Parse(heighit.Text);
-            if (h > 3)
+            try
             {
-                h = h / 100;
-            }
-            w = double.Parse(weighit.Text);
-            if (w > 1000)
-            {
-                w = w / 100;
-            }
+                h = double.Parse(heighit.Text);
+                if (h > 3)
+                {
+                    h = h / 100;
+                }
+                w = double.Parse(weighit.Text);
+                if (w > 1000)
+                {
+                    w = w / 100;
+                }
 
-            answer = w / (h * h);
-            result.Text = ""+answer;
-            
+                answer = w / (h * h);
+                result.Text = "" + answer;
+            }catch(FormatException e)
+            {
+                result.Text = "数値を入力してください";
+            }
         }
     }
 }
